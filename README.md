@@ -14,15 +14,15 @@
     <tr align="center" valign="bottom">
       <td>
         <b>支持的算法</b>
-        <img src="../images/bar.png"/>
+        <img src=".images/bar.png"/>
       </td>
       <td>
         <b>示例</b>
-        <img src="../images/bar.png"/>
+        <img src=".images/bar.png"/>
       </td>
       <td>
         <b>用户接口</b>
-        <img src="../images/bar.png"/>
+        <img src=".images/bar.png"/>
       </td>
     </tr>
     </tr>
