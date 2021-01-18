@@ -32,7 +32,7 @@
         <li><b>进化算法</b></li>
            <ul>
           <li>ES（进化策略）</li>
-          <li>CMA-ES（协方差矩阵适应进化策略）</li>k
+          <li>CMA-ES（协方差矩阵适应进化策略）</li>
           <li>GA（遗传算法）</li>
            </ul>
         </ul>
@@ -40,18 +40,17 @@
         <li><b>优化器</b></li>
            <ul>
           <li>SGD</li>
-          <li>Momentum</li>k
+          <li>Momentum</li>
           <li>Adam</li>
            </ul>
         </ul>
+        <ul>
         <li><b>更新机制</b></li>
            <ul>
-          <li></li>
           <li>同步（收敛稳定）</li>
           <li>异步（模型迭代快）</li>
            </ul>
         </ul>
-
       </td>
       <td align="left" >
         <ul>
@@ -68,7 +67,6 @@
             </ul>
         </ul>
       </td>
-
       <td>
         <ul>
             <li><b><a href="APIs">配置文件</b></li>
@@ -78,7 +76,6 @@
             <li><a href="APIs">AsyncESAgent</a></li>
             <li><a href="APIs">SamplingInfo</a></li>
             </ul>
-
         </ul>
       </td>
     </tr>
