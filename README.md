@@ -13,7 +13,7 @@
   <tbody>
     <tr align="center" valign="bottom">
       <td>
-        <b>支持的算法</b>
+        <b>算法支持</b>
         <img src=".images/bar.png"/>
       </td>
       <td>
@@ -31,24 +31,24 @@
         <ul>
         <li><b>进化算法</b></li>
            <ul>
-          <li>ES（进化策略）</li>
-          <li>CMA-ES（协方差矩阵适应进化策略）</li>
-          <li>GA（遗传算法）</li>
+          <li><a href="algorithms">ES</a></li>
+          <li><a href="algorithms">CMA-Es</a></li>
+          <li><a href="algorithms">GA</a></li>
            </ul>
         </ul>
         <ul>
         <li><b>优化器</b></li>
            <ul>
-          <li>SGD</li>
-          <li>Momentum</li>
-          <li>Adam</li>
+          <li><a href="algorithms">SGD</a></li>
+          <li><a href="algorithms">Momentum</a></li>
+          <li><a href="algorithms">Adam</a></li>
            </ul>
         </ul>
         <ul>
         <li><b>更新机制</b></li>
            <ul>
-          <li>同步（收敛稳定）</li>
-          <li>异步（模型迭代快）</li>
+          <li><a href="algorithms">同步</a></li>
+          <li><a href="algorithms">异步</a></li>
            </ul>
         </ul>
       </td>
