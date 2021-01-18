@@ -69,7 +69,7 @@
       </td>
       <td>
         <ul>
-            <li><b><a href="APIs">配置文件</b></li>
+            <li><b><a href="APIs">配置文件</a></b></li>
             <li><b>函数接口</b></li>
             <ul>
             <li><a href="APIs">ESAgent</a></li>
