@@ -60,6 +60,8 @@
               <li><a href="examples">MovieLens</a></li>
               <li><a href="examples">Cartpole</a></li>
             </ul>
+        </ul>
+        <ul>
             <li><b>线上模拟示例</b></li>
             <ul>
               <li><a href="examples">同步更新</a></li>
@@ -70,6 +72,8 @@
       <td>
         <ul>
             <li><b><a href="APIs">配置文件</a></b></li>
+        </ul>
+        <ul>
             <li><b>函数接口</b></li>
             <ul>
             <li><a href="APIs">ESAgent</a></li>
