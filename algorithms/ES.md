@@ -5,7 +5,7 @@ Evolution Strategies (ES) 进化策略算法是一种无梯度随机优化算法
 具体来讲,在每一次迭代,我们以一个参数向量$w$为基础,通过对$w$加上一些高斯噪声来产生一定数量的和$w$稍稍不同的参数向量:$w_1,w_2,.......w_n$. 随后我们便会根据reward function计算出这$n$个参数向量对应的reward值, 并且把这些reward加起来. 而新的$w_{new}$便是根据每个参数向量$w_i$乘以由$reward_i$占全部reward的比例加权平均而来. 随后再对$w_{new}$进行下一次迭代.
 
 ## 如何使用
-在配置文件的solver中声明`type`字段为`BASIC_ES`，并且`sampling`字段中的`type`设为`GAUSSIAN_SAMPLING`，如下面`config.prototxt`所示：
+使用ES算法，需要在配置文件的`solver`中声明`type`字段为`BASIC_ES`，并且`sampling`字段中的`type`设为`GAUSSIAN_SAMPLING`，如下面`config.prototxt`所示：
 ```
 solver {
     type: BASIC_ES
