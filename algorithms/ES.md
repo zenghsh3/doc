@@ -28,10 +28,10 @@ solver {
 ```
 
 ### gaussian_sampling参数
-- `std`: 高斯分布的标准差，默认值为1.0，通过调整`std`的大小可以调整每次迭代的权重搜索空间的大小。std越大，搜索空间越大。
-- `cached`: 是否提前创建noise缓存，使用缓存可以提前建立noise表，提升采样效率，默认值为false。
-- `seed`: 随机创建noise表使用的随机种子。
-- `cache_size`: 缓存的大小，默认值为100000。
+- `std`： 高斯分布的标准差，默认值为1.0，通过调整`std`的大小可以调整采样噪声的数值大小。
+- `cached`：是否提前创建噪声缓存，使用缓存可以提前建立噪声表，提升采样效率，默认值为false。
+- `seed`：创建噪声表使用的随机种子。
+- `cache_size`：缓存的大小，默认值为100000。
 
 ## 参考
 论文：[Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
