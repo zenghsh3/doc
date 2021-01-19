@@ -1,7 +1,8 @@
 # ES
 
 Evolution Strategies (ES) 进化策略算法是一种无梯度随机优化算法。从抽象层面来看, ES算法主要是从某些随机参数开始，不断重复：(1) 随机扰动参数；(2)评估扰动后参数表现以及更新迭代参数。其算法流程如下图：
-<img src=".images/ES_Algorithm.png"/>
+
+<img src=".images/ES_Algorithm.png" width="800"/>
 
 优点：
 - 不需要梯度回传，黑盒优化；
