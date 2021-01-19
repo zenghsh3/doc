@@ -31,24 +31,24 @@
         <ul>
         <li><b>进化算法</b></li>
            <ul>
-          <li><a href="algorithms">ES</a></li>
-          <li><a href="algorithms">CMA-ES</a></li>
-          <li><a href="algorithms">GA</a></li>
+          <li><a href="algorithms/ES.md">ES</a></li>
+          <li><a href="algorithms/CMA-ES.md">CMA-ES</a></li>
+          <li><a href="algorithms/GA.md">GA</a></li>
            </ul>
         </ul>
         <ul>
         <li><b>优化器</b></li>
            <ul>
-          <li><a href="algorithms">SGD</a></li>
-          <li><a href="algorithms">Momentum</a></li>
-          <li><a href="algorithms">Adam</a></li>
+          <li><a href="algorithms/SGD.md">SGD</a></li>
+          <li><a href="algorithms/Momentum.md">Momentum</a></li>
+          <li><a href="algorithms/Adam.md">Adam</a></li>
            </ul>
         </ul>
         <ul>
         <li><b>更新机制</b></li>
            <ul>
-          <li><a href="algorithms">同步</a></li>
-          <li><a href="algorithms">异步</a></li>
+          <li><a href="algorithms/sync_update.md">同步</a></li>
+          <li><a href="algorithms/async_update.md">异步</a></li>
            </ul>
         </ul>
       </td>
@@ -56,29 +56,29 @@
         <ul>
             <li><b>基础示例</b></li>
             <ul>
-              <li><a href="examples">Boston</a></li>
-              <li><a href="examples">MovieLens</a></li>
-              <li><a href="examples">Cartpole</a></li>
+              <li><a href="examples/Boston.md">Boston</a></li>
+              <li><a href="examples/MovieLens.md">MovieLens</a></li>
+              <li><a href="examples/Cartpole.md">Cartpole</a></li>
             </ul>
         </ul>
         <ul>
             <li><b>线上模拟示例</b></li>
             <ul>
-              <li><a href="examples">同步更新</a></li>
-              <li><a href="examples">异步更新</a></li>
+              <li><a href="examples/sync_online_example.md">同步更新</a></li>
+              <li><a href="examples/async_offline_example.md">异步更新</a></li>
             </ul>
         </ul>
       </td>
       <td>
         <ul>
-            <li><b><a href="APIs">配置文件</a></b></li>
+            <li><b><a href="APIs/config.md">配置文件</a></b></li>
         </ul>
         <ul>
             <li><b>函数接口</b></li>
             <ul>
-            <li><a href="APIs">ESAgent</a></li>
-            <li><a href="APIs">AsyncESAgent</a></li>
-            <li><a href="APIs">SamplingInfo</a></li>
+            <li><a href="APIs/ESAgent.md">ESAgent</a></li>
+            <li><a href="APIs/AsyncESAgent.md">AsyncESAgent</a></li>
+            <li><a href="APIs/SamplingInfo.md">SamplingInfo</a></li>
             </ul>
         </ul>
       </td>
