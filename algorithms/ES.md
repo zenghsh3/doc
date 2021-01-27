@@ -1,6 +1,6 @@
 # ES
 
-Evolution Strategies (ES) 进化策略算法是一种无梯度随机优化算法。从抽象层面来看, ES算法主要是从某些随机参数开始，不断重复：(1) 随机扰动参数；(2)评估扰动后参数表现以及更新迭代参数。其算法流程如下图：
+Evolution Strategies (ES) 进化策略算法是一种无梯度随机优化算法。ES算法主要通过对参数进行随机扰动，并根据扰动后模型的评估表现来更新迭代参数。其算法流程如下图：
 
 <img src=".images/ES_Algorithm.png" width="800"/>
 
@@ -10,7 +10,9 @@ Evolution Strategies (ES) 进化策略算法是一种无梯度随机优化算法
 - 易于并行。
 
 ## 如何使用
-使用ES算法，需要在配置文件的`solver`中声明`type`字段为`BASIC_ES`，并且`sampling`字段中的`type`设为`GAUSSIAN_SAMPLING`，如下面`config.prototxt`所示：
+EvoKit实现了OpenAI论文中提到的ES算法，并支持线上进行参数扰动和预测，线下可以通过key还原噪声和进行参数更新。
+
+在EvoKit中使用ES算法，需要在配置文件的`solver`中声明`type`字段为`BASIC_ES`，并且`sampling`字段中的`type`设为`GAUSSIAN_SAMPLING`，如下面`config.prototxt`所示：
 ```
 solver {
     type: BASIC_ES
