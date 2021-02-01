@@ -39,4 +39,5 @@ solver {
 
 ## 参考
 [CMA-ES - Wikipedia](https://en.wikipedia.org/wiki/CMA-ES)
+
 [The CMA Evolution Strategy:A Tutorial](https://arxiv.org/abs/1604.00772?context=cs)

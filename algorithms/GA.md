@@ -43,4 +43,5 @@ is_ga: true
 
 ## 参考
 [Genetic Algorithm - Wikipedia](https://en.wikipedia.org/wiki/Genetic_algorithm)
+
 [Genetic Algorithm - tutorialspoint](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_introduction.htm)
