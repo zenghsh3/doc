@@ -34,11 +34,11 @@ is_ga: true
 ### ga_sampling参数
 - `model_population`
   - `pop_size`：种群的数量，默认值为8；
-  - `init_std`：初始化可能解时的标准差 默认值为0.05;
+  - `init_std`：初始化可能解时的标准差 默认值为0.05。
 
 ### basic_ga参数
-- `elite_num`：每一代中被选择成为“父母”代的数量，假设每代共有`pop_size`个体，则拥有前`elite_num`名reward的解可以作为“父母”代，剩下的`pop_size` - `elite_num`个解将经过“父母”代间通过交叉和变异产生。
-- `crossover_type`： 产生新的子代可能解的方式，有`CROSSOVER_ELEMENTWISE`和`CROSSOVER_LAYERWISE`两种方式。`CROSSOVER_ELEMENTWISE`: 以最小元素（每个模型参数）为粒度，效率较低，但随机性强；`CROSSOVER_LAYERWISE`：以layer（网络层）为粒度，子代随机从父母中继承整个layer的参数，效率较高，并且因为粒度较大，效果更加可控。默认值为`CROSSOVER_LAYERWISE`。
+- `elite_num`：每一代中被选择成为“父母”代的数量，假设每代共有`pop_size`个体，则拥有前`elite_num`名reward的解可以作为“父母”代，剩下的`pop_size` - `elite_num`个解将经过“父母”代间通过交叉和变异产生；
+- `crossover_type`： 产生新的子代可能解的方式，有`CROSSOVER_ELEMENTWISE`和`CROSSOVER_LAYERWISE`两种方式。`CROSSOVER_ELEMENTWISE`: 以最小元素（每个模型参数）为粒度，效率较低，但随机性强；`CROSSOVER_LAYERWISE`：以layer（网络层）为粒度，子代随机从父母中继承整个layer的参数，效率较高，并且因为粒度较大，效果更加可控。默认值为`CROSSOVER_LAYERWISE`；
 - `mutation_std`：每一代产生新的解之后变异率的标准差，默认值为0.05。
 
 ## 参考
