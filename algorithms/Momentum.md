@@ -3,7 +3,7 @@ Momentum优化器是带动量的SGD优化器，相比SGD可以加速收敛和减
 <img src=".images/Momentum_eq.png" width="400"/>
 
 ## 如何使用
-在EvoKit中使用Momentum优化器，需要在配置文件的`solver`中，将`optimizer`的`type`字段设为`MOMENTUM`，如下面`config.prototxt`所示：
+在EvoKit中使用Momentum优化器，需要在配置文件的`solver`中，将`optimizer`的`type`字段设为`MOMENTUM`，并配置相关参数，如下面`config.prototxt`所示：
 ```
 solver {
     type: BASIC_ES

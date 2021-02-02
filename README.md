@@ -3,6 +3,8 @@
 <br>`EvoKit` 是一个集合了多种进化算法、可兼容不同预测框架的进化算法库，主打 **快速上线验证**。 </br>
 目前，`EvoKit` 基于 [Paddle Lite](https://www.paddlepaddle.org.cn/paddle/paddlelite) 飞桨推理引擎实现了基于进化算法的**线上采样**和**线下更新**的一站式上线流程。
 
+<img src=".images/overview.png"/>
+
 ## 使用场景
 - 想要基于进化算法对**线上模型**进行黑盒优化（例如优化目标对模型不可导场景）;
 - 想快速调研**不同进化算法**在同一个问题上的效果。
