@@ -6,7 +6,7 @@
 
 - `EvoKitConfig`
   - `solver`
-    - type：更新算法，可选<a href="../algorithms/ES.md">BASIC_ES</a>/<a href="../algorithms/CMA-ES.md">CMA_ES</a>/<a href="../algorithms/GA.md">BASIC_GA</a>
+    - type：更新算法，可选[<a href="../algorithms/ES.md">BASIC_ES</a>][<a href="../algorithms/CMA-ES.md">CMA_ES</a>][<a href="../algorithms/GA.md">BASIC_GA</a>]
     - sampling
     - optimizer
     - reward_normalizer
