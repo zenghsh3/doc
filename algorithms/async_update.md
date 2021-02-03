@@ -10,7 +10,7 @@
 同时，在异步更新机制中，`EvoKit`会自动帮助用户进行模型仓库的管理，并且会在模型更新时，自动修正采样模型和更新模型不相同带来的噪声偏移问题，下图演示了同步和异步的梯度计算区别：
 
 <p align="center">
-<img src=".images/update_mechanism.png" width=400/>
+<img src=".images/update_mechanism.png" width=500/>
 </p>
 
 
