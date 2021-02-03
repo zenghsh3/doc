@@ -69,7 +69,7 @@
             <li><b>线上模拟示例</b></li>
             <ul>
               <li><a href="examples/sync_online_example.md">同步更新</a></li>
-              <li><a href="examples/async_offline_example.md">异步更新</a></li>
+              <li><a href="examples/async_online_example.md">异步更新</a></li>
             </ul>
         </ul>
       </td>
