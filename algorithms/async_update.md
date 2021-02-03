@@ -16,17 +16,13 @@
 
 
 ## 如何使用
-使用`EvoKit`进行异步更新时，需要使用`AsyncESAgent`类创建agent
+使用`EvoKit`进行异步更新时，需要使用`AsyncESAgent`类创建agent，主要包括下面三个步骤：
+- 初始化solver：保存solver相关信息到初始模型文件夹中（注意只需要运行一次）；
+- 在线采样：创建`AsyncESAgent`实例，加载指定模型和配置，在线上进行模型的噪声扰动（`add_noise`），然后和线上环境进行交互和评估，并保存日志；
+- 离线更新：创建`AsyncESAgent`实例，加载指定模型和配置，根据日志文件还原模型噪声和对应评估奖励，更新模型参数，并产出下一轮迭代模型。
 
-主要包括下面三个模块：
 
-- init_solver
-初始化solver，并保存solver相关信息到初始模型文件夹中（注意只需要运行一次）
-
-- online_sampling
-在线采样，加载指定模型和solver，在线
-
-- offline_update
+线上模拟示例可以参考：<a href="examples/sync_online_example.md">异步更新示例</a>
 
 
 ### 配置文件
