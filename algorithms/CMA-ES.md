@@ -20,6 +20,11 @@ solver {
             }
         }
     }
+    cma_es {
+        ccov: 0.1
+        preset_eigenvalues: true
+        max_eigenvalue: 5.0
+    }
     optimizer {
         ...
     }
@@ -30,12 +35,17 @@ solver {
 ```
 
 ### cma_sampling参数
-- `sigma`：步长，默认值为1.0 
+- `sigma`：步长，默认值为1.0；
 - `gaussian_sampling`：
   - `std`：高斯分布的标准差，默认值为1.0，通过调整`std`的大小可以调整采样噪声的数值大小；
   - `cached`：是否提前创建噪声缓存，使用缓存可以提前建立噪声表，提升采样效率，默认值为false；
   - `seed`：创建噪声表使用的随机种子；
   - `cache_size`：缓存的大小，默认值为100000。
+
+### cma_es参数
+- `ccov`：协方差矩阵的累积学习率，默认值为0.1；
+- `preset_eigenvalues`：是否使用`max_eigenvalue`作为协方差矩阵的限制值，默认值为true；
+- `max_eigenvalue`：协方差矩阵的最大值，默认值为5.0。
 
 ## 参考
 [CMA-ES - Wikipedia](https://en.wikipedia.org/wiki/CMA-ES)
