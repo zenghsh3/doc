@@ -22,7 +22,7 @@
 - 离线更新：创建`AsyncESAgent`实例，加载指定模型和配置，根据日志文件还原模型噪声和对应评估奖励，更新模型参数，并产出下一轮迭代模型。
 
 
-线上模拟示例可以参考：<a href="examples/async_online_example.md">异步更新示例</a>
+线上完整模拟示例可以参考：<a href="examples/async_online_example.md">异步更新示例</a>
 
 
 ### 配置文件
