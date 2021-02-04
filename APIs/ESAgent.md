@@ -1,47 +1,35 @@
 # ESAgent
 
+`ESAgent`提供了`EvoKit`进行同步更新的主要接口，包括模型和配置加载、模型扰动、模型预测和模型更新等功能。
 路径: `paddle/include/evo_kit/es_agent.h`
-
+函数说明如下：
 
 ## load_config
-功能:
+- 功能
 
-* 通过调用`load_proto_conf`函数从`config_path`中加载配置信息
+加载和解析用户提供的配置文件 （注意：load_config需要在调用`load_inference_model`函数后调用）。
 
-参数:
+- 参数
+  -  `config_path`：(const std::string&) 配置文件的路径
 
-* `const std::string& config_path`
+- 返回值
+  - `bool`：是否加载和解析配置成功。
 
-返回值:`bool`
 
-* `load_proto_conf`函数的返回值,加载成功为`true`
-* 否则为`false`
+## clone
 
-#### clone
+- 功能
+克隆一个新的agent用于采样，会从原始agent中拷贝所有属性（包括模型参数），但`is_sampling_agnet`属性设为`true`（原始agent该属性为`false`）。
+注意：
+  - `clone`函数返回的agent不能再调用`clone`函数
+  - 只有`clone`函数返回的agent能调用`add_noise`函数
 
-参数:
 
-* 无
+- 参数
+  - 无
 
-功能:
-
-* clone出用来采样的agent,agent,其各项属性除`is_sampling_agent`外均与调用此函数的agent相同(:alarm_clock:这里是与agent相同还是默认情况?)
-* 属性
-  * `_predictor`
-  * `_sampling_predictor`
-  * `_cxx_config`
-  * `is_sampling_agnet`
-  * `_es_solver`
-  * `_ga_solver`
-  * `_weight_names`
-  * `_config`
-  * `_total_weight_size`
-  * `_noise`
-
-返回值:`std::shared_ptr`
-
-* 如果调用此函数的agent为clone出来,返回`nullprt`
-* 否则便会返回clone出来的agent
+- 返回值
+  - `std::shared_ptr`：返回克隆后的新agent（如果调用此函数的agent为clone出来的，返回`nullprt`）。
 
 #### update
 
