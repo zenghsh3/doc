@@ -7,7 +7,7 @@
 ## load_config
 - 功能
 
-加载和解析用户提供的配置文件 （注意：load_config需要在调用`load_inference_model`函数后调用）。
+  加载和解析用户提供的配置文件 （注意：load_config需要在调用`load_inference_model`函数后调用）。
 
 - 参数
   -  `config_path`：(const std::string&) 配置文件的路径
@@ -19,7 +19,8 @@
 ## clone
 
 - 功能
-克隆一个新的agent用于采样，会从原始agent中拷贝所有属性（包括模型参数），但`is_sampling_agnet`属性设为`true`（原始agent该属性为`false`）。
+
+  克隆一个新的agent用于采样，会从原始agent中拷贝所有属性（包括模型参数），但`is_sampling_agnet`属性设为`true`（原始agent该属性为`false`）。
 注意：
   - `clone`函数返回的agent不能再调用`clone`函数
   - 只有`clone`函数返回的agent能调用`add_noise`函数
