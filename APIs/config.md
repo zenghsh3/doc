@@ -14,3 +14,4 @@
     - basic_ga：GA算法相关配置，具体参考[<a href="../algorithms/GA.md">BASIC_GA</a>]
   - `async_es`：进化计算异步更新机制相关配置，具体参考[<a href="../algorithms/async_update.md">异步更新机制</a>]
   - `is_ga`：声明是否使用遗传算法
+  - `weight_name`：`EvoKit`支持部分参数更新，用户可以通过`weight_name`来声明需要更新的参数名（默认是模型所有参数都会进行更新）。
