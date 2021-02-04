@@ -1,6 +1,6 @@
 # ESAgent
 
-`ESAgent`提供了`EvoKit`进行同步更新的主要接口，包括配置加载、模型加载、模型扰动、模型预测和模型更新等功能。
+`ESAgent`提供了`EvoKit`进行**同步**更新的主要接口，包括配置加载、模型加载、模型扰动、模型预测和模型更新等功能。
 
 路径: `paddle/include/evo_kit/es_agent.h`
 
@@ -24,9 +24,8 @@
 
   克隆一个新的agent用于采样，会从原始agent中拷贝所有属性（包括模型参数），但`is_sampling_agnet`属性设为`true`（原始agent该属性为`false`）。
 注意：
-  - `clone`函数返回的agent不能调用`clone`/`update`/`load`/`load_inference_model`/`load_solver`/`save`/`save_inference_model`/`save_solver`函数。
-  - 只有`clone`函数返回的agent能调用`add_noise`函数
-
+  - `clone`函数返回的agent不能调用`clone`/`update`/`load`/`load_inference_model`/`load_solver`/`save`/`save_inference_model`/`save_solver`函数；
+  - 只有`clone`函数返回的agent能调用`add_noise`函数。
 
 - 参数
   - 无
