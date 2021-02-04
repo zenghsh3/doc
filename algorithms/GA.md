@@ -3,7 +3,9 @@
 GA (Genetic Algorithm) 遗传算法是模拟达尔文生物进化论的自然选择和遗传学机理的生物进化过程的计算模型，是一种通过模拟自然进化过程搜索最优解的方法。遗传算法以一种群体中的所有个体为对象，并利用随机化技术指导对一个被编码的参数空间进行高效搜索。其中，选择、交叉和变异构成了遗传算法的遗传操作；参数编码、初始群体的设定、适应度函数的设计、遗传操作设计、控制参数设定五个要素组成了遗传算法的核心内容。
 
 ## 如何使用
-在EvoKit中使用GA算法，需要在配置文件的`solver`中声明`type`字段为`BASIC_GA`，`sampling`字段中的`type`设为`GA_SAMPLING`，在`basic_ga`字段中配置遗传算法相关设置，并且将`is_ga`字段设为`true`，如下面`config.prototxt`所示：
+
+在`EvoKit`中使用GA算法，需要在配置文件的`solver`中声明`type`字段为`BASIC_GA`，`sampling`字段中的`type`设为`GA_SAMPLING`，在`basic_ga`字段中配置遗传算法相关设置，并且将`is_ga`字段设为`true`，如下面`config.prototxt`所示：
+
 ```
 solver {
     type: BASIC_GA

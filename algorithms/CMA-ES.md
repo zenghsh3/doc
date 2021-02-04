@@ -4,7 +4,8 @@ CMA-ES (Covariance Matrix Adaptation Evolution Strategy) 协方差矩阵自适�
 算法可以根据每一代的结果，适应性调整下一代的搜索空间，例如在距离最优解较远时，增大搜索空间，在距离最优解较近时，减小搜索空间。在每一代中，CMA-ES算法会提供一个多变量的正态分布的参数，用于下一代的采样。
 
 ## 如何使用
-在EvoKit中使用CMA-ES算法，需要在配置文件的`solver`中声明`type`字段为`CMA_ES`，并且`sampling`字段中的`type`设为`CMA_SAMPLING`，如下面`config.prototxt`所示：
+在`EvoKit`中使用CMA-ES算法，需要在配置文件的`solver`中声明`type`字段为`CMA_ES`，并且`sampling`字段中的`type`设为`CMA_SAMPLING`，如下面`config.prototxt`所示：
+
 ```
 solver {
     type: CMA_ES
