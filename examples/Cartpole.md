@@ -10,9 +10,9 @@
 
 2. 编译demo
     - 通过bcloud的云端集群编译即可，命令为：
-  ```
-  bcloud build
-  ```
+    ```
+    bcloud build
+    ```
 
 3. 运行demo
     - 编译完成后，我们需要增加动态库查找路径：
