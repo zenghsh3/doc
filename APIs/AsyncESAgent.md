@@ -172,6 +172,7 @@
 ## init_solver
 
 - 功能
+
   根据加载的配置文件来初始化算法（solver），（注意：`init_solver`需要在调用`load_inference_model`函数后调用）。
 
 - 参数
