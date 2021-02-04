@@ -2,17 +2,15 @@
 
 路径: `paddle/include/evo_kit/es_agent.h`
 
-## 接口函数
 
-#### load_config
+## load_config
+功能:
+
+* 通过调用`load_proto_conf`函数从`config_path`中加载配置信息
 
 参数:
 
 * `const std::string& config_path`
-
-功能:
-
-* 通过调用`load_proto_conf`函数从`config_path`中加载配置信息
 
 返回值:`bool`
 
