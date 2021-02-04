@@ -6,6 +6,7 @@
 
 ## 如何运行
 1. 下载代码
+
   在icode上clone代码，我们的仓库路径是： http://icode.baidu.com/repos/baidu/nlp/evokit/tree/stable
 
 2. 编译demo
