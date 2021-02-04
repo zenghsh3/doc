@@ -37,7 +37,7 @@
 
 - 功能
 
-  更新模型参数，根据`SamplingInfo`还原采样噪声，然后根据噪声和`rewards`来计算模型的更新梯度。
+  更新模型参数，根据`SamplingInfo`还原采样噪声，然后根据噪声和`rewards`来计算模型的更新梯度，并更新网络参数。
 
 - 参数
   - `sampling_infos`：(std::vector<SamplingInfo>&) 采样模型的相关信息（噪声key、模型id），具体参考[<a href="SamplingInfo.md">SamplingInfo</a>]。

@@ -37,7 +37,7 @@
 
 - 功能
 
-  更新模型参数，根据`SamplingInfo`还原采样噪声，然后根据噪声和`rewards`来计算模型的更新梯度。（注意：异步更新过程中会从`SamplingInfo`中获取模型id，根据当前模型和采样模型的参数偏差来修正噪声偏移，具体参考[<a href="../algorithms/async_update.md">异步更新机制</a>]）。
+  更新模型参数，根据`SamplingInfo`还原采样噪声，然后根据噪声和`rewards`来计算模型的更新梯度，并更新网络参数。（注意：异步更新过程中会从`SamplingInfo`中获取模型id，根据当前模型和采样模型的参数偏差来修正噪声偏移，具体参考[<a href="../algorithms/async_update.md">异步更新机制</a>]）。
 
 - 参数
   - `sampling_infos`：(std::vector<SamplingInfo>&) 采样模型的相关信息（噪声key、模型id），具体参考[<a href="SamplingInfo.md">SamplingInfo</a>]。
