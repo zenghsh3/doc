@@ -7,18 +7,24 @@
 ## 如何运行
 1. 下载代码
 
-  在icode上clone代码，我们的仓库路径是： http://icode.baidu.com/repos/baidu/nlp/evokit/tree/stable
+  - 在icode上clone代码，我们的仓库路径是： http://icode.baidu.com/repos/baidu/nlp/evokit/tree/stable
 
 2. 编译demo
 
-  通过bcloud的云端集群编译即可，命令为： bcloud build
+  - 通过bcloud的云端集群编译即可，命令为：
+  ```
+  bcloud build
+  ```
 
 3. 运行demo
 
-  编译完成后，我们需要增加动态库查找路径：
-
+  - 编译完成后，我们需要增加动态库查找路径：
+  ```
   export LD_LIBRARY_PATH=./output/so/:$LD_LIBRARY_PATH
+  ```
 
-  运行demo： ./output/bin/cartpole/train
-
+  - 运行demo： 
+  ```
+  ./output/bin/cartpole/train
+  ```
   【注意: 运行时需确保当前的路径为项目根路径】
