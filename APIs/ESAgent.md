@@ -1,7 +1,9 @@
 # ESAgent
 
-`ESAgent`提供了`EvoKit`进行同步更新的主要接口，包括模型和配置加载、模型扰动、模型预测和模型更新等功能。
+`ESAgent`提供了`EvoKit`进行同步更新的主要接口，包括配置加载、模型加载、模型扰动、模型预测和模型更新等功能。
+
 路径: `paddle/include/evo_kit/es_agent.h`
+
 函数说明如下：
 
 ## load_config
