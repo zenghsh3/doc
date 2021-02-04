@@ -7,7 +7,7 @@
 ## load_config
 - 功能
 
-  加载和解析用户提供的配置文件 （注意：load_config需要在调用`load_inference_model`函数后调用）。
+  加载和解析用户提供的配置文件。
 
 - 参数
   -  `config_path`：(const std::string&) 配置文件的路径
