@@ -22,7 +22,7 @@
 
   克隆一个新的agent用于采样，会从原始agent中拷贝所有属性（包括模型参数），但`is_sampling_agnet`属性设为`true`（原始agent该属性为`false`）。
 注意：
-  - `clone`函数返回的agent不能再调用`clone`函数
+  - `clone`函数返回的agent不能调用`clone`/`update`/`load`/`load_inference_model`/`load_solver`/`save`/`save_inference_model`/`save_solver`函数。
   - 只有`clone`函数返回的agent能调用`add_noise`函数
 
 
@@ -32,160 +32,150 @@
 - 返回值
   - `std::shared_ptr`：返回克隆后的新agent（如果调用此函数的agent为clone出来的，返回`nullprt`）。
 
-#### update
+## update
 
-参数:
+- 功能
 
-* `std::vector<SamplingInfo>& sampling_infos`
-* `std::vector<float>& rewards`
+  更新模型参数，根据`SamplingInfo`还原采样噪声，然后根据噪声和`rewards`来计算模型的更新梯度。
 
-功能:
+- 参数
+  - `sampling_infos`：(std::vector<SamplingInfo>&) 采样模型的相关信息（噪声key、模型id），具体参考[<a href="SamplingInfo.md">SamplingInfo</a>]。
+  - `rewards`：(std::vector<float>&) 采样模型和环境交互过程中的评估奖励。
 
-* 通过调用`_config`中对应的solver类型的`update`函数来实现更新效果
-  * 如果`_config->is_ga()`为`true`,则会调用`_ga_solver->update`
-  * 否则会调用`_es_solver->sync_update`
+- 返回值
+  - `bool`：是否更新模型成功（如果调用次函数的agent是`clone`出来的，返回`false`）。
 
-返回值:`bool`
+## add_noise
 
-* 如果调用此函数的agent为clone出来,返回`false`
-* 如果`_config`中对应的`solver->update`的返回值为false,返回`false`
-* 不是以上情况,返回`true`
+- 功能
 
-#### add_noise
+  根据配置文件设置的`sampling`方法对模型进行随机噪声扰动，并保存还原噪声的相关信息。（注意：只有`clone`函数返回的agent可以调用此函数。）
 
-参数:
 
-* `SamplingInfo& sampling_info`
-* `bool gen_key`
+- 参数
 
-功能:     
+  - `sampling_info`：(SamplingInfo&) 用于存储可以还原噪声的key。
+  - `gen_key`： (bool) 是否需要随机生成噪声的key，如果为`true`的话，需要`sampling_info`已经存储有key，并基于这个key生成噪声；如果为`false`的话，则agent会随机生成产生噪声的key，并保存到`sampling_info`。
 
-* 通过调用`config`中对应的solver类型的`sampling`函数来实现添加噪声效果
+- 返回值
+
+  - `bool`：是否成功对模型进行噪声扰动。
+    - 如果调用此函数的agent为`clone`出来,返回`false`
+    - 如果`gen_key`为false并且`sampling_info`中不包含key，返回`false`
+
+## get_predictor
+
+- 功能
+
+  获取PaddleLite框架的predictor，可以后续用于模型推理。
+
+- 参数
+
+  - 无
+
 
 返回值:
 
-* 如果调用此函数的agent为clone出来,返回`false`
-* 如果`gen_key`为false并且`sampling_info`中不包含key,返回`false`
-* 如果`_config`中对应的`solver->sampling`的返回值为false,返回`false`
-* 不是以上情况,返回`true`
+  - `std::shared_ptr<PaddlePredictor>`：可以进行模型推理（inference）的predictor指针。
 
-#### get_predictor​​
+## load
 
-参数:
+- 功能
 
-* 无
-
-功能:
-
-* 获取predictor, predictor内定义了神经网络,可以用来计算对应输入经过神经网络处理之后的输出.
-
-返回值:
-
-* `std::shared_ptr<PaddlePredictor> _sampling_predictor`
-
-#### load
-
-参数:
-
-* `const std::string& model_dir` 用来加载model的路径
-
-功能:
-
-* 通过调用`load_inference_model`以及`load_solver`函数来从`model_dir`处加载inference_model以及solver
-
-返回值:`bool`
-
-* 如果`load_inference_model`以及`load_solver`函数均返回`true`则返回`true`
-* 否则返回`false`
-
-#### load_inference_model
+  通过调用`load_inference_model`以及`load_solver`函数来从`model_dir`处加载模型（inference_model）以及算法（solver）配置。
 
 
+- 参数
 
-参数:
+  - `model_dir`：(const std::string&) 用来加载inference_model和solver的路径
 
-* `const std::string& model_dir`用于加载inference_model的路径
 
-功能:
+- 返回值
+  - `bool`：是否加载成功。
 
-* 从`model_dir`处加载inference_model
 
-返回值:`bool`
+## load_inference_model
 
-* 如果调用此函数的agent为clone出来的,则无法加载,返回`false`
-* 否则返回`true`
+- 功能
 
-#### load_solver
+  从`model_dir`处加载模型（inference_model）
 
-参数:
 
-* `const std::string& model_dir` 用于加载solver的路径
+- 参数
 
-功能:
+  - `model_dir`：(const std::string&) 用于加载inference_model的路径
 
-* 根据`_config`的值从`model_dir`处加载`ga_solver`或`es_solver`
-* 注意:在加载solver前需要首先加载inference_model,否则会函数会返回`flase`
+- 返回值
+  - `bool`：是否加载成功。
 
-返回值:`bool`
 
-* 如果调用此函数的agent为clone出来的,则无法加载,返回`false`
+## load_solver
+- 功能
 
-* 根据`solver->load()`的返回值返回`true`或`false`
+  从`model_dir`处加载算法（solver）配置。（注意：`load_solver`需要在调用`load_inference_model`函数后调用）。
 
-#### save
 
-参数:
+- 参数
 
-* `const std::string& model_dir`保存model以及solver的路径
+  - `model_dir`：(const std::string&) 用于加载solver的路径
 
-功能:
+- 返回值
+  - `bool`：是否加载成功。
 
-* 通过调用`save_inference_model(model_dir)` 以及`save_solver(model_dir)`来保存inference_model以及solver
+## save
 
-返回值: `bool`
+- 功能
 
-* 均保存成功返回`true`
-* 否则返回`false`
+  通过调用`save_inference_model`以及`save_solver`函数把模型（inference_model）以及算法（solver）配置保存到`model_dir`。
 
-#### save_iniference_model
 
-参数:
+- 参数
 
-* `const std::string& model_dir`保存model的路径
+  - `model_dir`：(const std::string&) 用来保存inference_model和solver的路径
 
-功能:
 
-* 通过调用`_predictor->SaveOptimizeModel`保存model
+- 返回值
+  - `bool`：是否保存成功。
 
-返回值:`bool`
+## save_inference_model
 
-* 如果调用此函数的agent为clone出来的,则无法保存,返回`false`
-* 如果调用此函数的agent为sampling_agent,则在保存model后返回`true`
+- 功能
 
-#### save_solver
+  把模型（inference_model）保存到`model_dir`。
 
-参数:
 
-* `const std::string& model_dir`保存model的路径
+- 参数
 
-通过调用`es_solver->save`或`_ga_solver->save`来保存solver
+  - `model_dir`：(const std::string&) 用来保存inference_model的路径
 
-返回值:`bool`
 
-返回`solver->save`的返回值
+- 返回值
+  - `bool`：是否保存成功。
 
-#### init_solver
+## save_solver
 
-参数:
+- 功能
 
-* 无
+  把算法（solver）配置保存到`model_dir`。
 
-功能:
 
-* 根据`_config`的值初始化一个ga_sovler或es_solver
+- 参数
 
-返回值:`bool`
+  - `model_dir`：(const std::string&) 用来保存solver的路径
 
-* 如果在调用`init_solver`之前没有调用`load_inference_model`,则会返回`false`
 
-* 否则便会一句`config`中的配置返回`_es_solver->init()`或`_ga_solver->init()`的结果
+- 返回值
+  - `bool`：是否保存成功。
+
+
+## init_solver
+
+- 功能
+  根据加载的配置文件来初始化算法（solver），（注意：`init_solver`需要在调用`load_inference_model`函数后调用）。
+
+- 参数
+
+  - 无
+
+- 返回值
+  - `bool`：是否初始化solver成功。
