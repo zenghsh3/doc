@@ -4,7 +4,7 @@
 目前，`EvoKit` 基于 [Paddle Lite](https://www.paddlepaddle.org.cn/paddle/paddlelite) 飞桨推理引擎实现了基于进化算法的**线上采样**和**线下更新**的一站式上线流程。
 
 <p align="center">
-<img src=".images/overview.png" width=500/>
+<img src="doc/.images/overview.png" width=500/>
 </p>
 
 ## 使用场景
@@ -18,15 +18,15 @@
     <tr align="center" valign="bottom">
       <td>
         <b>算法支持</b>
-        <img src=".images/bar.png"/>
+        <img src="doc/.images/bar.png"/>
       </td>
       <td>
         <b>示例</b>
-        <img src=".images/bar.png"/>
+        <img src="doc/.images/bar.png"/>
       </td>
       <td>
         <b>用户接口</b>
-        <img src=".images/bar.png"/>
+        <img src="doc/.images/bar.png"/>
       </td>
     </tr>
     </tr>
@@ -35,24 +35,24 @@
         <ul>
         <li><b>进化算法</b></li>
            <ul>
-          <li><a href="algorithms/ES.md">ES</a></li>
-          <li><a href="algorithms/CMA-ES.md">CMA-ES</a></li>
-          <li><a href="algorithms/GA.md">GA</a></li>
+          <li><a href="doc/algorithms/ES.md">ES</a></li>
+          <li><a href="doc/algorithms/CMA-ES.md">CMA-ES</a></li>
+          <li><a href="doc/algorithms/GA.md">GA</a></li>
            </ul>
         </ul>
         <ul>
         <li><b>优化器</b></li>
            <ul>
-          <li><a href="algorithms/SGD.md">SGD</a></li>
-          <li><a href="algorithms/Momentum.md">Momentum</a></li>
-          <li><a href="algorithms/Adam.md">Adam</a></li>
+          <li><a href="doc/algorithms/SGD.md">SGD</a></li>
+          <li><a href="doc/algorithms/Momentum.md">Momentum</a></li>
+          <li><a href="doc/algorithms/Adam.md">Adam</a></li>
            </ul>
         </ul>
         <ul>
         <li><b>更新机制</b></li>
            <ul>
-          <li><a href="algorithms/sync_update.md">同步</a></li>
-          <li><a href="algorithms/async_update.md">异步</a></li>
+          <li><a href="doc/algorithms/sync_update.md">同步</a></li>
+          <li><a href="doc/algorithms/async_update.md">异步</a></li>
            </ul>
         </ul>
       </td>
@@ -60,29 +60,29 @@
         <ul>
             <li><b>基础示例</b></li>
             <ul>
-              <li><a href="examples/Cartpole.md">Cartpole</a></li>
-              <li><a href="examples/Boston.md">Boston</a></li>
-              <li><a href="examples/MovieLens.md">MovieLens</a></li>
+              <li><a href="doc/examples/Cartpole.md">Cartpole</a></li>
+              <li><a href="doc/examples/Boston.md">Boston</a></li>
+              <li><a href="doc/examples/MovieLens.md">MovieLens</a></li>
             </ul>
         </ul>
         <ul>
             <li><b>线上模拟示例</b></li>
             <ul>
-              <li><a href="examples/sync_online_example.md">同步更新</a></li>
-              <li><a href="examples/async_online_example.md">异步更新</a></li>
+              <li><a href="doc/examples/sync_online_example.md">同步更新</a></li>
+              <li><a href="doc/examples/async_online_example.md">异步更新</a></li>
             </ul>
         </ul>
       </td>
       <td>
         <ul>
-            <li><b><a href="APIs/config.md">配置文件</a></b></li>
+            <li><b><a href="doc/APIs/config.md">配置文件</a></b></li>
         </ul>
         <ul>
             <li><b>函数接口</b></li>
             <ul>
-            <li><a href="APIs/ESAgent.md">ESAgent</a></li>
-            <li><a href="APIs/AsyncESAgent.md">AsyncESAgent</a></li>
-            <li><a href="APIs/SamplingInfo.md">SamplingInfo</a></li>
+            <li><a href="doc/APIs/ESAgent.md">ESAgent</a></li>
+            <li><a href="doc/APIs/AsyncESAgent.md">AsyncESAgent</a></li>
+            <li><a href="doc/APIs/SamplingInfo.md">SamplingInfo</a></li>
             </ul>
         </ul>
       </td>
