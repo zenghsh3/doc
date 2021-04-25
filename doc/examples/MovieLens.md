@@ -4,7 +4,7 @@
 
 MovieLens 是一个推荐系统和虚拟社区网站，于1997年建立。其主要功能为应用协同过滤技术和用户对电影的喜好，向用户推荐电影。
 
-示例路径：./demo/movielens/
+示例路径：./examples/movielens/
 
 主要代码模块说明：
 - `config.prototxt`：参数配置文件（算法、优化器、奖励归一化器等参数配置），如下面所示，配置声明了只对`fc_0.w_0`、`fc_0.b_0`、`fc_1.w_0`和`fc_1.b_0`四层参数进行更新。
@@ -52,12 +52,14 @@ MovieLens 是一个推荐系统和虚拟社区网站，于1997年建立。其主
   
 
 ## 如何运行
-1. 下载代码
-    - 在icode上clone代码，仓库路径： http://icode.baidu.com/repos/baidu/nlp/evokit/tree/stable
+1. 新建仓库 && 拷贝代码
+    - 在icode上新建仓库项目并下载到本地，例如： http://icode.baidu.com/repos/baidu/personal-code/yourdemo
+    - 下载[evokit项目](https://console.cloud.baidu-int.com/devops/icode/repos/baidu/nlp/evokit/tree/stable)(stable分支)，将`./examples/movielens/`目录下的代码拷贝到你的仓库项目根目录下。
 
 2. 编译demo
-    - 通过bcloud的云端集群编译即可，命令为：
+    - 进入你的仓库项目根目录，通过bcloud的云端集群编译即可，命令为：
     ```
+    cd baidu/personal-code/yourdemo
     bcloud build
     ```
 

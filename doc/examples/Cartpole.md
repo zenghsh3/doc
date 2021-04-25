@@ -10,7 +10,7 @@ CartPole又叫倒立摆。小车上放了一根杆，杆会因重力而倒下。
 
 
 
-示例路径：./demo/cartpole/
+示例路径：./examples/cartpole/
 
 主要代码模块说明：
 - `gen_init_model.py`：用于生成一个初始化模型；
@@ -30,12 +30,14 @@ CartPole又叫倒立摆。小车上放了一根杆，杆会因重力而倒下。
   
 
 ## 如何运行
-1. 下载代码
-    - 在icode上clone代码，仓库路径： http://icode.baidu.com/repos/baidu/nlp/evokit/tree/stable
+1. 新建仓库 && 拷贝代码
+    - 在icode上新建仓库项目并下载到本地，例如： http://icode.baidu.com/repos/baidu/personal-code/yourdemo
+    - 下载[evokit项目](https://console.cloud.baidu-int.com/devops/icode/repos/baidu/nlp/evokit/tree/stable)(stable分支)，将`./examples/cartpole/`目录下的代码拷贝到你的仓库项目根目录下。
 
 2. 编译demo
-    - 通过bcloud的云端集群编译即可，命令为：
+    - 进入你的仓库项目根目录，通过bcloud的云端集群编译即可，命令为：
     ```
+    cd baidu/personal-code/yourdemo
     bcloud build
     ```
 

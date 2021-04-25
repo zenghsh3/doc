@@ -3,7 +3,7 @@
 本示例主要是基于波士顿房价数据集来模拟线上的交互环境，演示如何基于EvoKit训练回归模型问题，以及ESAgent相关接口的使用。
 
 
-示例路径：./demo/boston/
+示例路径：./examples/boston/
 
 主要代码模块说明：
 - `config.prototxt`：参数配置文件（算法、优化器、奖励归一化器等参数配置）；
@@ -22,12 +22,14 @@
   
 
 ## 如何运行
-1. 下载代码
-    - 在icode上clone代码，仓库路径： http://icode.baidu.com/repos/baidu/nlp/evokit/tree/stable
+1. 新建仓库 && 拷贝代码
+    - 在icode上新建仓库项目并下载到本地，例如： http://icode.baidu.com/repos/baidu/personal-code/yourdemo
+    - 下载[evokit项目](https://console.cloud.baidu-int.com/devops/icode/repos/baidu/nlp/evokit/tree/stable)(stable分支)，将`./examples/boston/`目录下的代码拷贝到你的仓库项目根目录下。
 
 2. 编译demo
-    - 通过bcloud的云端集群编译即可，命令为：
+    - 进入你的仓库项目根目录，通过bcloud的云端集群编译即可，命令为：
     ```
+    cd baidu/personal-code/yourdemo
     bcloud build
     ```
 
