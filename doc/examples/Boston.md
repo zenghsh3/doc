@@ -40,7 +40,7 @@
     ```
     - 运行demo： 
     ```
-    ./output/bin/boston/train
+    ./output/bin/app/train
     ```
     【注意: 运行时需确保当前的路径为项目根路径】
 

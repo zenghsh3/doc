@@ -70,7 +70,7 @@ MovieLens 是一个推荐系统和虚拟社区网站，于1997年建立。其主
     ```
     - 运行demo： 
     ```
-    ./output/bin/movielens/train
+    ./output/bin/app/train
     ```
     【注意: 运行时需确保当前的路径为项目根路径】
 

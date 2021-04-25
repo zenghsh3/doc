@@ -48,7 +48,7 @@ CartPole又叫倒立摆。小车上放了一根杆，杆会因重力而倒下。
     ```
     - 运行demo： 
     ```
-    ./output/bin/cartpole/train
+    ./output/bin/app/train
     ```
     【注意: 运行时需确保当前的路径为项目根路径】
 
